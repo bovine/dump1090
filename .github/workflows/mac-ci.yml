@@ -20,6 +20,7 @@ jobs:
         brew install libbladerf
         brew install hackrf
         brew install pkg-config
+        sudo ln -s /usr/include/machine/endian.h /usr/include/endian.h
     - name: make
       run: make
     - name: test
