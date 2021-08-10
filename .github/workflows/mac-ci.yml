@@ -16,7 +16,10 @@ jobs:
     - name: Install dependencies
       run: |
         brew update
-        brew install -v librtlsdr
+        brew install librtlsdr
+        brew install libbladerf
+        brew install hackrf
+        brew install pkg-config
     - name: make
       run: make
     - name: test
