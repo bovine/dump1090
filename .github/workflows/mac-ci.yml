@@ -21,7 +21,9 @@ jobs:
         brew install hackrf
         brew install pkg-config
     - name: Fix headers
-      run: xcode-select --install
+      run: |
+        sudo ln -s /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/machine/endian.h /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/endian.h
+#      xcode-select --install
 #      find / | grep endian.h
 #        sudo ln -s /usr/include/machine/endian.h /usr/include/endian.h
     - name: make
