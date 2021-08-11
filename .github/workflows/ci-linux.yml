@@ -19,3 +19,5 @@ jobs:
           sudo apt-get install -y build-essential debhelper librtlsdr-dev libusb-1.0-0-dev pkg-config fakeroot libbladerf-dev dh-systemd libhackrf-dev liblimesuite-dev
     - name: make
       run: dpkg-buildpackage -b -us -uc
+    - name: test
+      run: make test
